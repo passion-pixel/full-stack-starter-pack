@@ -3,8 +3,8 @@
 ## Table of Contents
 
 1. [Overview](#overview)
+1. [Commands](#commands)
 1. [File Layout](#file-layout)
-1. [npm Commands](#npm-commands)
 1. [Deploying to Heroku](#deploying-to-heroku)
 
 ## Overview
@@ -13,16 +13,15 @@
 - indents changed from 4 to 2
 - removed PropTypes validation
 - update `node-sass` dependency so that `yarn` can be used instead of `npm`
-- cut down README documentation
+- cut down README documentation - assumes that reader is more experienced
 
 This is a simple starter to get you up and running for React projects. This is intended to provide:
 
-- a lightweight webpack config (for development and production)
+- a lightweight webpack config for development and production
 - some helpful tooling for development workflow
-- a similar setup to what you'll see in the wild
 - Heroku-ready deployment setup
 
-## npm Commands
+## Commands
 
 - `$ yarn dev`: fire up a development server
 - `$ yarn start`: build your production assets and run the server
