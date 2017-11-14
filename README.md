@@ -3,6 +3,11 @@ _for [Heroku](https://www.heroku.com/) deployment_
 
 ## Overview
 
+Based off of Horizons Starter. Main differences between this and the Horizons Starter:
+- indents changed to 2 from 4
+- removed PropTypes validation
+
+
 This is a simple starter to get you up and running for React projects. This is intended to provide:
 
 * a lightweight webpack config (for development and production)
