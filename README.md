@@ -1,4 +1,9 @@
-# React + Node Starter
+# React-Redux + Express + Node Starter
+
+## Table of Contents
+
+1. [Overview](#Overview)
+1. [Running](#Running)
 
 ## Overview
 
