@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const routes = require('./backend/routes');
+const api = require('./backend/api');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -10,7 +10,7 @@ app.get('/', (request, response) => {
   response.sendFile(__dirname + '/public/index.html'); // For React/Redux
 });
 
-app.use(routes);
+app.use('/api', api);
 
 app.listen(PORT, error => {
   error
