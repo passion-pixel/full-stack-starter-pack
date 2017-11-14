@@ -6,6 +6,7 @@ _for [Heroku](https://www.heroku.com/) deployment_
 Based off of Horizons Starter. Main differences between this and the Horizons Starter:
 - indents changed to 2 from 4
 - removed PropTypes validation
+- update `node-sass` dependency so that yarn can be used instead of package-lock.json
 
 
 This is a simple starter to get you up and running for React projects. This is intended to provide:
