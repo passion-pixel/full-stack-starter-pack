@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-1. [Overview](#Overview)
-1. [Running](#Running)
+1. [Overview](#overview)
+1. [Running](#running)
 
 ## Overview
 
