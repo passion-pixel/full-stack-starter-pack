@@ -4,6 +4,9 @@
 
 1. [Overview](#overview)
 1. [Running](#running)
+1. [File Layout](#file-layout)
+1. [Production Build](#product-build)
+1. [Deploying to Heroku](#deploying-to-heroku)
 
 ## Overview
 
@@ -63,9 +66,3 @@ $ heroku open
 Heroku will follow the `build` command in your `package.json` and compile assets with `webpack.prod.config.js`. It runs the Express web server in `server.js`.
 
 If you're unfamiliar with Heroku deployment (or just need a refresher), they have a really great walkthrough [here](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
-
-## Running on Glitch
-
-1. Go to https://glitch.com/edit/#!/horizons-hackathon-react and click
-  `Remix this 🎤`
-1. Click `Show` at the top to preview your app!
