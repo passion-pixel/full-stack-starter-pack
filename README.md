@@ -13,7 +13,8 @@
 - indents changed from 4 to 2
 - removed PropTypes validation
 - update `node-sass` dependency so that `yarn` can be used instead of `npm`
-- cut down README documentation - assumes that reader is more experienced
+- cut down README documentation - assumes that user is more experienced
+- the original Horizons Starter lacks the `History` module that may be used for rerouting. This package lacks that as well. The current solution to rerouting asynchronously is to use `HashRouter` along with `window.location.hash = /react-router-url`. Of course, React `<Link />` can still be used for synchronous routing. **If a better approach exists please let me know at tangj1122 at gmail!**
 
 This is a simple starter to get you up and running for React projects. This is intended to provide:
 
