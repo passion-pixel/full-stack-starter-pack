@@ -1,4 +1,4 @@
-# React-Redux + Express + Node Starter
+# React-Redux + Express + Node Starter Pack
 
 When someone on your team tells you they are about to initialize a React project from scratch
 
@@ -10,8 +10,7 @@ When someone on your team tells you they are about to initialize a React project
 1. [Commands](#commands)
 1. [File Layout](#file-layout)
 1. [Deploying to Heroku](#deploying-to-heroku)
-
-TODO: refresh webpack dynamically from http://localhost:3000 upon updates to frontend
+1. [Todos](#todos)
 
 ## Overview
 
@@ -19,10 +18,7 @@ TODO: refresh webpack dynamically from http://localhost:3000 upon updates to fro
 - indents changed from 4 to 2
 - removed PropTypes validation
 - update `node-sass` dependency so that `yarn` can be used instead of `npm`
-- cut down README documentation - assumes that user is more experienced
-
-### Rerouting with HashRouter
-The original Horizons Starter lacks the `History` module that may be used for rerouting. This package lacks that as well. The current solution to rerouting asynchronously is to use `HashRouter` along with `window.location.hash = /react-router-url`. Of course, React `<Link />` can still be used for synchronous routing. **If a better approach exists please let me know at tangj1122 at gmail!**
+- cut down README documentation
 
 ## Commands
 
@@ -49,4 +45,12 @@ $ heroku login
 $ heroku create -a name-of-your-app
 $ git push heroku master
 $ heroku open
+
 ```
+## Todos
+
+- figure out how to refresh webpack dynamically from http://localhost:3000 upon updates to frontend
+- setup global variables that frontend has access to, likely via WebPack (current solution is to store some variable, e.g. backend url, in `localStorage`)
+- figure out best practices for React routers: The original Horizons Starter lacks the `History` module that may be used for rerouting. This package lacks that as well. The current solution to rerouting asynchronously is to use `HashRouter` along with `window.location.hash = /react-router-url`. Of course, React `<Link />` can still be used for synchronous routing. **If a better approach exists please let me know at tangj1122 at gmail!**
+
+
