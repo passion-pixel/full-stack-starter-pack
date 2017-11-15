@@ -4,6 +4,8 @@ When someone on your team tells you they are about to initialize a React project
 
 ![smack](https://media.giphy.com/media/ptDRdwFkFVAkg/giphy.gif)
 
+When you show this them starter pack
+![rain](https://media.giphy.com/media/rrj7FpUH9BlK0/giphy.gif)
 ## Table of Contents
 
 1. [Overview](#overview)
@@ -52,6 +54,3 @@ $ heroku open
 - figure out how to refresh webpack dynamically from http://localhost:3000 upon updates to frontend
 - setup global variables that frontend has access to, likely via WebPack (current solution is to store some variable, e.g. backend url, in `localStorage`)
 - figure out best practices for React routers: The original Horizons Starter lacks the `History` module that may be used for rerouting. This package lacks that as well. The current solution to rerouting asynchronously is to use `HashRouter` along with `window.location.hash = /react-router-url`. Of course, React `<Link />` can still be used for synchronous routing. **If a better approach exists please let me know at tangj1122 at gmail!**
-
-
-![rain](https://media.giphy.com/media/rrj7FpUH9BlK0/giphy.gif)
