@@ -6,7 +6,7 @@ When someone on your team tells you they are about to initialize a React project
 
 When you show this them starter pack
 
-![rain](https://media.giphy.com/media/Qw4X3FPbL62C9dvcKxq/giphy.gif)
+![rain](https://media.giphy.com/media/3osxYamKD88c6pXdfO/giphy.gif)
 
 ## Table of Contents
 
