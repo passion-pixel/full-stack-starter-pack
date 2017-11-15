@@ -1,5 +1,9 @@
 # React-Redux + Express + Node Starter
 
+When someone on your team tells you they are about to initialize a React project from scratch
+
+![Silicon Valley](https://media.giphy.com/media/ptDRdwFkFVAkg/giphy.gif)
+
 ## Table of Contents
 
 1. [Overview](#overview)
