@@ -2,7 +2,7 @@
 
 When someone on your team tells you they are about to initialize a React project from scratch
 
-![Silicon Valley](https://media.giphy.com/media/ptDRdwFkFVAkg/giphy.gif)
+![smack](https://media.giphy.com/media/ptDRdwFkFVAkg/giphy.gif)
 
 ## Table of Contents
 
@@ -54,3 +54,4 @@ $ heroku open
 - figure out best practices for React routers: The original Horizons Starter lacks the `History` module that may be used for rerouting. This package lacks that as well. The current solution to rerouting asynchronously is to use `HashRouter` along with `window.location.hash = /react-router-url`. Of course, React `<Link />` can still be used for synchronous routing. **If a better approach exists please let me know at tangj1122 at gmail!**
 
 
+![rain](https://media.giphy.com/media/rrj7FpUH9BlK0/giphy.gif)
