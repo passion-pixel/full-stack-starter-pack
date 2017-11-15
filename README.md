@@ -4,7 +4,7 @@ When someone on your team tells you they are about to initialize a React project
 
 ![smack](https://media.giphy.com/media/ptDRdwFkFVAkg/giphy.gif)
 
-When you show this them starter pack
+When you show them this starter pack
 
 ![rain](https://media.giphy.com/media/3osxYamKD88c6pXdfO/giphy.gif)
 
