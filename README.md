@@ -10,11 +10,18 @@ When you show them this starter pack
 
 ## Table of Contents
 
+## Todos
+
+- figure out how to move `server.js` to `backend` directory
+- figure out how to refresh webpack dynamically from http://localhost:3000 upon updates to frontend
+- setup global variables that frontend has access to, likely via WebPack (current solution is to store some variable, e.g. backend url, in `localStorage`)
+- figure out best practices for React routers: The original Horizons Starter lacks the `History` module that may be used for rerouting. This package lacks that as well. The current solution to rerouting asynchronously is to use `HashRouter` along with `window.location.hash = /react-router-url`. Of course, React `<Link />` can still be used for synchronous routing. **If a better approach exists please let me know at tangj1122 at gmail!**
+
+1. [Todos](#todos)
 1. [Overview](#overview)
 1. [Commands](#commands)
 1. [File Layout](#file-layout)
 1. [Deploying to Heroku](#deploying-to-heroku)
-1. [Todos](#todos)
 
 ## Overview
 
@@ -40,19 +47,4 @@ When you show them this starter pack
 - **Backend Express**
   - Entry point is `server.js`
   - API routes are under `backend/api.js`
-  - API routes are served under `http://localhost:3000/api`
-
-## Deploying to Heroku
-
-```
-$ heroku login
-$ heroku create -a name-of-your-app
-$ git push heroku master
-$ heroku open
-
-```
-## Todos
-
-- figure out how to refresh webpack dynamically from http://localhost:3000 upon updates to frontend
-- setup global variables that frontend has access to, likely via WebPack (current solution is to store some variable, e.g. backend url, in `localStorage`)
-- figure out best practices for React routers: The original Horizons Starter lacks the `History` module that may be used for rerouting. This package lacks that as well. The current solution to rerouting asynchronously is to use `HashRouter` along with `window.location.hash = /react-router-url`. Of course, React `<Link />` can still be used for synchronous routing. **If a better approach exists please let me know at tangj1122 at gmail!**
+  - API routes are served under `http://localhost:3000`

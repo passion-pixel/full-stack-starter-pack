@@ -1,5 +1,13 @@
-if (process.env.NODE_ENV === 'production') {
-  module.exports = require('./configureStore.prod');
-} else {
-  module.exports = require('./configureStore.dev');
+import { createStore, compose } from 'redux';
+import rootReducer from '../reducers';
+import DevTools from '../containers/DevTools';
+
+export function configureStore(initialState) {
+  return createStore(
+    rootReducer,
+    initialState,
+    compose(
+      DevTools.instrument()
+    )
+  );
 }
