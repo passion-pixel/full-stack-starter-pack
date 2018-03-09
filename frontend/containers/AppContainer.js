@@ -10,16 +10,12 @@ const AppContainer = ({ name }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    name: state.name
-  };
-};
+const mapStateToProps = (state) => ({
+  title: state.title
+});
 
-const mapDispatchToProps = (/* dispatch */) => {
-  return {
-  };
-};
+const mapDispatchToProps = (/* dispatch */) => ({
+});
 
 export default connect(
     mapStateToProps,

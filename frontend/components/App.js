@@ -15,8 +15,9 @@ import React from 'react';
 // export default App;
 
 const App = (props) => {
+  console.log(props);
   return (
-    <h1>Stateless {props.name}</h1>
+    <h1>Stateless {props.title}</h1>
   );
 };
 
