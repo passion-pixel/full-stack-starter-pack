@@ -1,19 +1,16 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-// const api = require('./api');
-const api = require('./backend/api');
+const api = require('./api');
+// const api = require('./backend/api');
 const bodyParser = require('body-parser');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html'); // For React/Redux
-  // res.sendFile('index.html', {root: 'public/'}, (err) => {
-  //   if (err) console.log(err);
-  // });
+  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
 });
 
 app.use('/', api);
