@@ -10,14 +10,40 @@ When you show them this starter pack
 
 ## Table of Contents
 
+1. [Setup](#setup)
 1. [Todos](#todos)
 1. [File Layout](#file-layout)
 1. [Commands](#commands)
+
+## Setup
+- clone this repo
+- create an `env.sh` in your root directory
+- add the two environment variables, one frontend, one backend
+- create database, source variables, and sync database
+
+```
+# your env.sh
+export API_URL='http://localhost:3000'
+export POSTGRES_URI='postgresql://postgres@localhost/<YOUR_DB_NAME>'
+```
+
+- create your Postgres database from your preferred interface
+- e.g. Using the Psql command line `CREATE DATABASE YOUR_DB_NAME`
+
+```
+# source your enviornment variables
+$ source env.sh
+$ yarn sync
+```
+
+If all goes well, you should see a message from the command line saying so!
+
 
 ## Todos
 
 - serve `bundle.js` successfully from express server
 - 404 redirect to homepage from express
+- add screenshot of what homepage should look like
 
 ## File layout
 
@@ -33,5 +59,6 @@ When you show them this starter pack
 - `$ yarn frontend`: serve and hot reload frontend with `webpack` from localhost:8082
 - `$ yarn backend` serve API and static frontend from localhost:3000
 - `$ yarn dev`: backend + frontend
-- `$ yarn start`: build your production assets and run the server
+- `$ yarn sync`: build your production assets and run the server
+- `$ yarn start`: sync local database
 - `$ npm run build`: Heroku uses this command during deployment
