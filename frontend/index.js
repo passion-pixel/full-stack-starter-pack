@@ -1,13 +1,31 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { configureStore, history } from './store/configureStore';
-import Root from './containers/Root';
+import {
+  createStore,
+  compose,
+  combineReducers,
+} from 'redux';
+import { Provider } from 'react-redux';
 
+import rootReducer from './reducers';
+import DevTools from './containers/DevTools';
+import AppContainer from './containers/AppContainer';
 import './assets/stylesheets/base.scss';
 
-const store = configureStore();
+console.log(history);
+
+const store = createStore(
+  rootReducer,
+  compose(DevTools.instrument())
+);
+
 
 render(
-  <Root store={store} history={history} />,
+  <Provider store={store}>
+    <div>
+      <AppContainer />
+      <DevTools />
+    </div>
+  </Provider>,
   document.getElementById('root')
 );

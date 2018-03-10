@@ -17,23 +17,22 @@ When you show them this starter pack
 
 ## Todos
 
-- figure out how to move `server.js` to `backend` directory
-- figure out how to refresh webpack dynamically from http://localhost:3000 upon updates to frontend
+- better option for serving `bundle.js` successfuly both on dev server and from express server
 - setup global variables that frontend has access to, likely via WebPack (current solution is to store some variable, e.g. backend url, in `localStorage`)
-- figure out best practices for React routers: The original Horizons Starter lacks the `History` module that may be used for rerouting. This package lacks that as well. The current solution to rerouting asynchronously is to use `HashRouter` along with `window.location.hash = /react-router-url`. Of course, React `<Link />` can still be used for synchronous routing. **If a better approach exists please let me know at tangj1122 at gmail!**
 
 ## Overview
 
 **Based off of Horizons Starter. Main differences between this and the Horizons Starter:**
 - indents changed from 4 to 2
 - removed PropTypes validation
+- removed actions
 - update `node-sass` dependency so that `yarn` can be used instead of `npm`
 - cut down README documentation
 
 ## Commands
 
-- `$ yarn frontend`: serve frontend with `webpack`
-- `$ yarn backend`
+- `$ yarn frontend`: serve and hot reload frontend with `webpack` from localhost:8082
+- `$ yarn backend` serve API and static frontend from localhost:3000
 - `$ yarn dev`: backend + frontend
 - `$ yarn start`: build your production assets and run the server
 - `$ npm run build`: Heroku uses this command during deployment
@@ -42,8 +41,8 @@ When you show them this starter pack
 
 - **Frontend React**
   - The top level application Container is in `frontend/containers/AppContainer.js`
-  - CSS styles are in `frontend/assets/stylesheets/base.scss`
+  - SCSS styles are in `frontend/assets/stylesheets/base.scss`
 - **Backend Express**
-  - Entry point is `server.js`
-  - API routes are under `backend/api.js`
-  - API routes are served under `http://localhost:3000`
+  - Entry point is `backend/index.js`
+  - API routes are under `backend/routes.js`
+  - API routes are served from `http://localhost:3000`

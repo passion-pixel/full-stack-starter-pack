@@ -2,12 +2,11 @@
   "name": "react-node-starter",
   "version": "1.0.0",
   "description": "an example for deploying a React + NodeJS app to Heroku",
-  "main": "server.js",
+  "main": "backend/index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
-    "dev": "concurrently -k \"npm run webpack\" \"npm run backend\"",
-    "frontend": "webpack -d --watch",
-    "webpack": "webpack-dev-server --content-base build/",
+    "dev": "concurrently -k \"npm run frontend\" \"npm run backend\"",
+    "frontend": "webpack-dev-server --content-base build/",
     "backend": "nodemon backend/",
     "start": "npm run build && NODE_ENV=production node backend/"
   },
@@ -25,6 +24,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
+    "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
     "redux-devtools": "^3.4.0",
     "redux-devtools-dock-monitor": "^1.1.2",
