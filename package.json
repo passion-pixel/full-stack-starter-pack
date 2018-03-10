@@ -8,11 +8,13 @@
     "dev": "concurrently -k \"npm run frontend\" \"npm run backend\"",
     "frontend": "webpack-dev-server --content-base build/",
     "backend": "nodemon backend/",
-    "start": "npm run build && NODE_ENV=production node backend/"
+    "start": "npm run build && NODE_ENV=production node backend/",
+    "sync": "node backend/postgres/sync.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.1",
@@ -22,6 +24,8 @@
     "express": "^4.15.2",
     "history": "^4.7.2",
     "node-sass": "^4.6.1",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
@@ -33,6 +37,7 @@
     "redux-devtools-dock-monitor": "^1.1.2",
     "redux-devtools-log-monitor": "^1.3.0",
     "sass-loader": "^6.0.3",
+    "sequelize": "^4.35.5",
     "style-loader": "^0.16.1",
     "webpack": "^2.3.3"
   },
