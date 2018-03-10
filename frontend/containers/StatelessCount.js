@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 
 const StatelessCount = ({ count, handleInc }) => {
   return (
-    <div style={{ display: 'block' }}>
+    <div>
       <button onClick={handleInc}>+</button>
-      Stateless count: {count}
+      Redux Stateless count: {count}
     </div>
   );
 };

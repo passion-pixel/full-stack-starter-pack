@@ -18,7 +18,7 @@ class AppContainer extends React.Component {
       <div>
         <App title={this.props.title} />
         <button onClick={this.handleInc}>+</button>
-        Stateful count: {this.state.count}
+        React State count: {this.state.count}
         <StatelessCount />
       </div>
     );

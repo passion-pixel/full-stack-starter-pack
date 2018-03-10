@@ -1,4 +1,19 @@
+/*
+  scss features include constants, nested elements, mixins+plugins...
+  https://sass-lang.com/guide
+*/
+
+$primary: red;
+
 h1 {
   font-family: helvetica;
   font-weight: 200;
+  color: $primary;
+}
+
+#root {
+  border: 1px solid black;
+  button {
+    background-color: green;
+  }
 }
