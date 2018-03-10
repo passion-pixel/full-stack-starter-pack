@@ -1,6 +1,6 @@
-# React-Redux + Express + Node Starter Pack
+# The NERP Stack Starter Pack: Node + Express + React-Redux + Postgreql
 
-When someone on your team tells you they are about to initialize a React project from scratch
+When someone on your team tells you they are about to initialize a React project from scratch (or with `create-react-app`)
 
 ![smack](https://media.giphy.com/media/ptDRdwFkFVAkg/giphy.gif)
 
@@ -11,23 +11,22 @@ When you show them this starter pack
 ## Table of Contents
 
 1. [Todos](#todos)
-1. [Overview](#overview)
-1. [Commands](#commands)
 1. [File Layout](#file-layout)
+1. [Commands](#commands)
 
 ## Todos
 
-- better option for serving `bundle.js` successfuly both on dev server and from express server
-- setup global variables that frontend has access to, likely via WebPack (current solution is to store some variable, e.g. backend url, in `localStorage`)
+- serve `bundle.js` successfully from express server
+- 404 redirect to homepage from express
 
-## Overview
+## File layout
 
-**Based off of Horizons Starter. Main differences between this and the Horizons Starter:**
-- indents changed from 4 to 2
-- removed PropTypes validation
-- removed actions
-- update `node-sass` dependency so that `yarn` can be used instead of `npm`
-- cut down README documentation
+- **Frontend React Redux**
+  - entry point, router, and store config are in `frontend/index.js`
+  - SCSS styles are in `frontend/assets/stylesheets/base.scss`
+- **Backend Express**
+  - Entry point and middleware are in `backend/index.js`
+  - API routes are under `backend/routes.js` and are served from `http://localhost:3000`
 
 ## Commands
 
@@ -36,13 +35,3 @@ When you show them this starter pack
 - `$ yarn dev`: backend + frontend
 - `$ yarn start`: build your production assets and run the server
 - `$ npm run build`: Heroku uses this command during deployment
-
-## File layout
-
-- **Frontend React**
-  - The top level application Container is in `frontend/containers/AppContainer.js`
-  - SCSS styles are in `frontend/assets/stylesheets/base.scss`
-- **Backend Express**
-  - Entry point is `backend/index.js`
-  - API routes are under `backend/routes.js`
-  - API routes are served from `http://localhost:3000`
