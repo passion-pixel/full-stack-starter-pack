@@ -37,6 +37,8 @@ If all goes well, you should see a message from the command line saying so!
 - serve `bundle.js` successfully from express server
 - 404 redirect to homepage from express
 - add screenshot of what homepage should look like
+- switch devtools route with queried data
+- add an example of of async redux (redux-thunk middleware)
 
 ## File layout
 
