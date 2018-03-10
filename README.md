@@ -17,24 +17,17 @@ When you show them this starter pack
 
 ## Setup
 - clone this repo
-- create an `env.sh` in your root directory
-- add the two environment variables, one frontend, one backend
-- create database, source variables, and sync database
-
+- create an `env.sh` in your root directory and add the two environment variables, one frontend, one backend
 ```
 # your env.sh
 export API_URL='http://localhost:3000'
 export POSTGRES_URI='postgresql://postgres@localhost/<YOUR_DB_NAME>'
 ```
 
-- create your Postgres database from your preferred interface
-- e.g. Using the Psql command line `CREATE DATABASE YOUR_DB_NAME`
+- create database: e.g. with the Psql command line `CREATE DATABASE <YOUR_DB_NAME>`
+- source variables: `$ source env.sh`
+- sync database: `$ yarn sync`
 
-```
-# source your enviornment variables
-$ source env.sh
-$ yarn sync
-```
 
 If all goes well, you should see a message from the command line saying so!
 
