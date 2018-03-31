@@ -1,4 +1,4 @@
-env.sh
+*env*
 node_modules/
 *.log
 *.DS_Store

@@ -7,12 +7,29 @@ module.exports = {
   ],
   module: {
     rules: [
-      { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015', 'react'],
+            plugins: [
+              'transform-object-rest-spread',
+              'transform-class-properties',
+              'transform-decorators-legacy',
+            ]
+          }
+        }
+      },
       { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
     ],
   },
   resolve: {
-    extensions: ['.js', '.scss']
+    extensions: ['.js', '.scss'],
+    alias: {
+      '~': path.resolve(__dirname, 'frontend')
+    }
   },
   output: {
     path: path.join(__dirname, '/public'),

@@ -1,30 +1,36 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import App from '../components/App';
-import StatelessCount from './StatelessCount.js';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React from 'react'
+import { connect } from 'react-redux'
+import App from '../components/App'
+import StatelessCount from './StatelessCount.js'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { bindState,
+         bindActions,
+         combine, } from '~/index.js'
 
-class AppContainer extends React.Component {
+@connect(combine(bindState('root')),
+         bindActions({}))
+
+export default class AppContainer extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       count: 0,
       userChores: [],
-    };
+    }
   }
   componentDidMount = async () => {
-    const resp = await axios.get(process.env.API_URL + '/users');
-    this.setState({ userChores: resp.data.data });
-    console.log(this.state);
+    const resp = await axios.get(process.env.API_URL + '/users')
+    this.setState({ userChores: resp.data.data })
+    console.log(this.state)
   }
   handleInc = () => {
-    this.setState({ count: ++this.state.count });
+    this.setState({ count: ++this.state.count })
   }
   render() {
     return (
       <div>
-        <App title={this.props.title} />
+        <App title={this.props.root.title} />
         <button onClick={this.handleInc}>+</button>
         React State count: {this.state.count}
         <StatelessCount />
@@ -39,18 +45,6 @@ class AppContainer extends React.Component {
           ))}
         </ul>
       </div>
-    );
+    )
   }
 }
-
-const mapStateToProps = (state) => ({
-  title: state.rootReducer.title
-});
-
-const mapDispatchToProps = (dispatch) => ({
-});
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(AppContainer);

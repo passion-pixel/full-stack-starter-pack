@@ -1,21 +1,20 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
+import { bindState,
+         bindActions,
+         combine, } from '~/index.js'
+import { increment } from '~/actions/index.js'
 
-const StatelessCount = ({ count, handleInc }) => {
-  return (
-    <div>
-      <button onClick={handleInc}>+</button>
-      Redux Stateless count: {count}
-    </div>
-  );
-};
+@connect(combine(bindState('root')),
+         bindActions({ increment }))
 
-const mapStateToProps = state => ({
-  count: state.count,
-});
-
-const mapDispatchToProps = dispatch => ({
-  handleInc: () => dispatch({ type: 'INC'}),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(StatelessCount);
+export default class StatelessCount extends React.Component {
+  render() {
+    return (
+      <div>
+        <button onClick={this.props.actions.increment}>+</button>
+        Redux Stateless count: {this.props.root.count}
+      </div>
+    )
+  }
+}
